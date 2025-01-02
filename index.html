@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Characters</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .character-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .character-list li {
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+    #loadingIndicator {
+      font-size: 1.5em;
+      color: #888;
+      display: none; /* 最初は非表示 */
+    }
+  </style>
+</head>
+<body>
+  <h1>Random Characters</h1>
+  <div id="loadingIndicator">Loading...</div>
+  <ul id="characterList" class="character-list"></ul>
+  <button id="generateButton">Generate</button>
+
+  <script type="module"　 >
+    import RandamChoseApp from './RandamChoseApp.mjs';
+    RandamChoseApp()
+  </script>
+</body>
+</html>
