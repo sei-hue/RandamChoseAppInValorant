@@ -34,7 +34,6 @@ const RandamChoseApp =()=>{
 
     const shuffled = characters.sort(() => 0.5 - Math.random());
   const randomCharacters = shuffled.slice(0, 5);
-  console.log(characters)
   randomCharacters.forEach(characters => {
     const li = document.createElement("li");
     li.textContent = characters.localizedNames[currentLanguage] || characters.localizedNames["ja-JP"]; // 選択言語に基づく名前を表示
@@ -56,7 +55,7 @@ const RandamChoseApp =()=>{
     currentLanguage = newLanguage;
     DisplayRandamCharacter(); // 言語変更後に再表示
   };
-  
+
 const initialize = async () => {
   await LoadCharacters(); // キャラクターをロード
   DisplayRandamCharacter(); // ランダムキャラクターを表示
@@ -70,7 +69,7 @@ document.getElementById("generateButton").addEventListener("click", initialize);
  document.getElementById("languageSelector").addEventListener("change", (event) => {
   ChangeLanguage(event.target.value);
 });
-initialize();
+//initialize();
 };
 
 
